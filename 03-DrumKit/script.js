@@ -1,12 +1,10 @@
 var keys = document.querySelectorAll(".key");
 var audio = document.querySelectorAll("audio");
-var thisKey;
 
 document.addEventListener('keydown', function (e) {
     for (i = 0; i < keys.length; i++) {
         if (e.keyCode == keys[i].dataset.key) {
             keys[i].classList.add("playing");
-
 
             for (j = 0; j < audio.length; j++) {
                 if (e.keyCode == audio[j].dataset.key) {
