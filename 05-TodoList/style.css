@@ -1,0 +1,116 @@
+*{
+    padding:0;
+    margin:0;
+}
+
+body{
+    font-family:'Montserrat', sans-serif;
+    color:#252525;
+    position:relative;
+}
+
+header{
+    width:100%;
+    height:20vh;
+    background:#EFEFEF;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    position:fixed;
+    top:0;
+    left:0;
+}
+header h1{
+    font-size:3em;
+    margin:0 0 20px 0;
+}
+header p{
+    font-size:1.5em;
+    font-style:italic;
+    font-weight:300;
+}
+
+section{
+    width:100%;
+    max-width:1200px;
+    height:auto;
+    margin:20vh auto;
+    padding:50px 0;
+    box-sizing:border-box;
+    display:flex;
+    justify-content:space-between;
+    align-items:flex-start;
+    overflow-y:scroll;
+}
+section article{
+    width:calc(100% / 3);
+    height:auto;
+    min-height:calc(60vh - 100px);
+}
+section article.enCours{
+    margin:0 25px;
+    position:relative;
+}
+section article h2{
+    text-align:center;
+    position:relative;
+}
+section article h2::after{
+    content:'';
+    width:100%;
+    height:2px;
+    background:#252525;
+    position:absolute;
+    bottom:-40px;
+    left:0;
+    margin:0 0 25px 0;
+}
+
+footer{
+    width:100%;
+    height:20vh;
+    background:#F6F6F6;
+    position:fixed;
+    bottom:0;
+    left:0;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+footer button{
+    font-family:'Montserrat';
+    text-transform:uppercase;
+    font-weight:600;
+    letter-spacing:3px;
+    color:white;
+    background:#252525;
+    padding:20px 30px;
+    box-sizing:border-box;
+    border:none;
+    position:relative;
+    transition: all 0.2s ease;
+    cursor:pointer
+}
+footer button::before{
+    content:'+';
+    width:100%;
+    height:100%;
+    color:white;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    position:absolute;
+    left:0;
+    top:0;
+    font-size:26px;
+    opacity:0;
+    transition:all 0.2s ease;
+}
+footer button:hover{
+    padding-left:65px;
+}
+footer button:hover::before{
+    left:-35%;
+    opacity:1;
+}
