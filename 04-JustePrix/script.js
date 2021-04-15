@@ -15,10 +15,10 @@ erreur.style.display = 'none';
 
 // Afficher l'erreur quand l'utilisateur entre autre chose qu'un nombre
 input.addEventListener('keyup', () => {
-  if(isNaN(input.value)){
+  if (isNaN(input.value)) {
     erreur.style.display = 'block';
   }
-  else{
+  else {
     erreur.style.display = 'none';
   }
 });
@@ -27,10 +27,10 @@ input.addEventListener('keyup', () => {
 formulaire.addEventListener('submit', (e) => {
   e.preventDefault();
 
-  if(isNaN(input.value) || input.value == ''){
+  if (isNaN(input.value) || input.value == '') {
     input.style.borderColor = "red";
   }
-  else{
+  else {
     nombreChoisi = input.value;
     input.value = '';
     coup++;
@@ -40,18 +40,18 @@ formulaire.addEventListener('submit', (e) => {
 });
 
 // Etape 4 - Afficher la bonne information
-function traitement(nb) {
+function traitement(nb) {
   var info = document.createElement('div');
 
-  if(nb < nombreAleatoire){
+  if (nb < nombreAleatoire) {
     info.textContent = '#' + coup + ' (' + nb + ') C\'est plus !';
     info.className = 'information plus';
   }
-  else if(nb > nombreAleatoire){
+  else if (nb > nombreAleatoire) {
     info.textContent = '#' + coup + ' (' + nb + ') C\'est moins !';
     info.className = 'information moins';
   }
-  else{
+  else {
     info.textContent = '#' + coup + ' (' + nb + ') Félicitation ! Tu as trouvé le nombre mystère !';
     info.className = 'information correct';
     input.disabled = true;
@@ -59,3 +59,4 @@ function traitement(nb) {
 
   document.querySelector('.evolution').prepend(info);
 }
+
