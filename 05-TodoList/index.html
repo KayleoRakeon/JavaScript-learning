@@ -25,6 +25,7 @@
     <div class="modale">
         <form>
             <input type="text" id="newTitre" placeholder="Donnez un titre à cette nouvelle tâche">
+            <p id="erreur">Veuillez renseigner un titre</p>
             <textarea id="newDesc" placeholder="Description (optionnelle)"></textarea>
             <button type="submit">Ajouter</button>
         </form>
@@ -32,7 +33,7 @@
 
     <header>
         <h1>Exercice 5 - To do list</h1>
-        <p>Gérez vos différentes tâches : Ajoutez-en, modifiez-les, changez leur statut, etc...</p>
+        <p>Gérez vos différentes tâches : Ajoutez-en, supprimez-les, changez leur statut, etc...</p>
     </header>
 
     <section>
@@ -44,9 +45,9 @@
                 <div class="separateur"></div>
                 <p id="desc">Ceci est la description de la tâche. Cette description est optionnelle.</p>
                 <div class="modif">
-                    <button>Modifier</button>
+                    <button id="supprimer">Supprimer</button>
                     <select name="statut" id="statut">
-                        <option value="aFaire" selected>À faire</option>
+                        <option value="aFaire">À faire</option>
                         <option value="enCours">En cours</option>
                         <option value="termine">Terminée</option>
                     </select>

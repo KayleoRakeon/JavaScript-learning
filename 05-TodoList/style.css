@@ -76,6 +76,7 @@ section article h2::after{
     border-radius:5px;
     border:solid 2px;
     display:none;
+    margin:0 0 20px 0;
 }
 .tache #titre{
     font-weight:bold;
@@ -201,6 +202,7 @@ footer button:hover::before{
     display:flex;
     flex-direction:column;
     align-items:flex-end;
+    position:relative;
 }
 .modale form input,
 .modale form textarea{
@@ -216,6 +218,15 @@ footer button:hover::before{
 .modale form textarea{
     min-height:100px;
     margin:20px 0 35px 0;
+}
+.modale form p{
+    position:absolute;
+    color:red;
+    font-weight:bold;
+    font-size:14px;
+    top:45px;
+    left:50px;
+    display:none;
 }
 .modale form button{
     background:#252525;
