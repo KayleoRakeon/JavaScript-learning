@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var userChoice = prompt('Choississez votre coup : pierre, feuille, ciseaux');
+        userChoice = userChoice.toLowerCase();
+        var choiceStack = ['pierre', 'feuille', 'ciseaux'];
+        var userChoiceIndex = choiceStack.indexOf(userChoice);
+
+        var random = Math.floor(Math.random() * 3);
+        var computerChoice = choiceStack[random];
+
+        console.log('Vous avez choisi : ' + userChoice + ', et l\'ordinateur a choisi : ' + computerChoice + '.');
+        
+        var results = [
+            ['t', 'l', 'w'],
+            ['w', 't', 'l'],
+            ['l', 'w', 't'],
+        ]
+        var userResult = results[userChoiceIndex][random];
+        var resultMap = {
+            't': 'Egalité',
+            'l': 'Vous avez perdu',
+            'w': 'Vous avez gagné',
+        }
+        console.log(resultMap[userResult]);
+
+    </script>
+</body>
+</html>
